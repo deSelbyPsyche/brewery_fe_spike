@@ -24,12 +24,16 @@ import {
   IngredientTypesState
 } from "./ingredient-types/ingredient-types.types";
 
+import deliveries from "./deliveries/deliveries.reducer";
+import { DeliveriesState, DeliveriesAction } from "./deliveries/deliveries.types";
+
 export type AppAction =
   | ProductsAction
   | BatchesAction
   | IngredientsAction
   | BatchIngredientsAction
-  | IngredientTypesAction;
+  | IngredientTypesAction
+  | DeliveriesAction;
 
 export type AppState = {
   products: ProductsState;
@@ -37,6 +41,7 @@ export type AppState = {
   ingredients: IngredientsState;
   batchIngredients: BatchIngredientsState;
   ingredientTypes: IngredientTypesState;
+  deliveries: DeliveriesState;
 };
 
 const rootReducer = combineReducers<AppState, AppAction>({
@@ -44,7 +49,8 @@ const rootReducer = combineReducers<AppState, AppAction>({
   batches,
   ingredients,
   batchIngredients,
-  ingredientTypes
+  ingredientTypes,
+  deliveries
 });
 
 export default rootReducer;
