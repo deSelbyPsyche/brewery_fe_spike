@@ -8,6 +8,7 @@ const LeftPanel: React.FC = () => {
         <Link to="/products">Products</Link>
         <Link to="/batches">Batches</Link>
         <Link to="/ingredients">Ingredients</Link>
+        <Link to="/deliveries">Deliveries</Link>
       </nav>
     </div>
   );

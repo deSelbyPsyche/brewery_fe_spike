@@ -10,6 +10,7 @@ import AddBatch from "./routes/AddBatch";
 import Ingredients from "./routes/Ingredients";
 import AddIngredient from "./routes/AddIngredient";
 import Batch from "./routes/Batch";
+import Deliveries from "./routes/Deliveries";
 
 function App() {
   return (
@@ -39,6 +40,9 @@ function App() {
         </Route>
         <Route exact path="/ingredients/add">
           <AddIngredient />
+        </Route>
+        <Route exact path="/deliveries">
+          <Deliveries />
         </Route>
       </Switch>
     </Router>
