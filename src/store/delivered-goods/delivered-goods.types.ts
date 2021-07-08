@@ -14,7 +14,8 @@ export interface DeliveredGood {
 // Action types
 
 export const DELIVERED_GOODS_FETCH_SUCCESS = "@@delivered-goods/FETCH_SUCCESS";
-export const DELIVERED_GOODS_FETCH_BY_ID_SUCCESS = "@@delivered-goods/FETCH_BY_ID_SUCCESS";
+export const DELIVERED_GOODS_FETCH_BY_ID_SUCCESS =
+  "@@delivered-goods/FETCH_BY_ID_SUCCESS";
 export const DELIVERED_GOODS_ADD_SUCCESS = "@@delivered-goods/ADD_SUCCESS";
 
 // Deliveries Api
@@ -23,10 +24,13 @@ export interface DeliveredGoodsFetchResponseData {
   deliveredGoods: DeliveredGood[];
 }
 
-export interface DeliveredGoodsAddParams {}
+export interface DeliveredGoodsAddParams {
+  ingredient_id: IngredientId;
+  quantity_kg: number;
+}
 
 export interface DeliveredGoodsAddResponseData {
-  delivery: DeliveredGood;
+  deliveredGood: DeliveredGood;
 }
 
 // Actions
@@ -41,7 +45,9 @@ interface DeliveredGoodsAddSuccess {
   payload: DeliveredGoodsAddResponseData;
 }
 
-export type DeliveredGoodsAction = DeliveredGoodsFetchSuccess | DeliveredGoodsAddSuccess;
+export type DeliveredGoodsAction =
+  | DeliveredGoodsFetchSuccess
+  | DeliveredGoodsAddSuccess;
 
 // State
 

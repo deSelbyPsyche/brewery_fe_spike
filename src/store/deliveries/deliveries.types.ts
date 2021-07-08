@@ -11,7 +11,8 @@ export interface Delivery {
 // Action types
 
 export const DELIVERIES_FETCH_SUCCESS = "@@deliveries/FETCH_SUCCESS";
-export const DELIVERIES_FETCH_BY_ID_SUCCESS = "@@deliveries/FETCH_BY_ID_SUCCESS";
+export const DELIVERIES_FETCH_BY_ID_SUCCESS =
+  "@@deliveries/FETCH_BY_ID_SUCCESS";
 export const DELIVERIES_ADD_SUCCESS = "@@deliveries/ADD_SUCCESS";
 
 // Deliveries Api

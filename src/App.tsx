@@ -10,7 +10,7 @@ import AddBatch from "./routes/AddBatch";
 import Ingredients from "./routes/Ingredients";
 import AddIngredient from "./routes/AddIngredient";
 import Batch from "./routes/Batch";
-import Deliveries from "./routes/Deliveries"
+import Deliveries from "./routes/Deliveries";
 
 function App() {
   return (
